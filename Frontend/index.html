@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="http://localhost:3000/register" method="post" id="registrationForm" novalidate>
+
+        <h2>Event Registration Form</h2>
+            <div class="errmsg" id="error-msg"></div>
+    
+        <label>Student Regno</label>
+        <input type="number" name="stdid" id="stdid" placeholder="Student Regno">
+        
+        <label>Name</label>
+        <input type="text" name="name" id="name" placeholder="Name" >
+        
+        <label>Email</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+    
+        <label>Mobile No:</label>
+        <input type="number" name="mobileno" id="mblno" placeholder="Enter Mobile">  
+          
+        <label for="event">Event</label>
+            <input list="events" id="event" name="event" placeholder="Select Event">
+            <datalist id="events">
+                <option value="Coding Ninjas">
+                <option value="Paper Presentation">
+                <option value="Tech Quiz">
+                <option value="Singing Competition">
+                <option value="Mistery Maze">
+            </datalist>
+        <button type="button" onclick="handleSubmit()">Register</button>
+    </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
